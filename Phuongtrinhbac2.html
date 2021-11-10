@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = prompt('nhập giá trị của a')
+    var b = prompt('nhập giá trị của b')
+    var c = prompt('nhập giá trị của c')
+
+    if (a == 0) {
+        if (b == 0) {
+            if (c == 0) {
+                alert('phương trình vô số nghiệm')
+            } else {
+                alert('phương trình vô nghiệm')
+            }
+        } else {
+            alert('phương trình có nghiệm duy nhất: ' + (-c / b))
+        }
+    } else {
+        var delta = b * b - 4 * a * c;
+        if (delta > 0) {
+            var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            alert('Nghiệm thứ nhất x1 = ' + x1 + 'Nghiệm thứ 2 x2 = ' + x2)
+        } else if (delta == 0) {
+                var sum = -b / 2*a
+            alert('phương trình có nghiệm kép: x1 = x2 = ' + sum)
+        } else {
+            alert('phương trình vô nghiệm')
+        }
+    }
+</script>
+</body>
+</html>
